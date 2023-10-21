@@ -2,23 +2,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import PacienteView from './views/PacienteView';
+import PacienteLanding from './views/Paciente/PacienteLanding';
+import PacienteBusqueda from './views/Paciente/PacienteBusqueda';
+import AgendarHora from './views/Paciente/AgendarHora';
 import ProfesionalView from './views/Profesional/ProfesionalView';
 import ProfesionalHome from './views/Profesional/ProfesionalHome';
-import FormularioHorariosServicios from './views/Profesional/FormularioHorariosServicios';
+import AgregarServicio from './views/Profesional/AgregarServicio';
+// import FormularioHorariosServicios from './views/Profesional/FormularioHorariosServicios';
 
 function App() {
   return (
     <Router>
       <nav>
         <Link to="/profesional">Vista del Profesional</Link> | 
-        <Link to="/paciente">Vista del Paciente</Link>
+        <Link to="/pacienteLanding">Vista del Paciente</Link>
       </nav>
 
       <Routes>
         <Route path="/profesional" element={<ProfesionalView />} />
         <Route path="/profesional/home" element={<ProfesionalHome />} />
-        <Route path="/profesional/formulario" element={<FormularioHorariosServicios />} />
+        <Route path="/profesional/agregarservicio" element={<AgregarServicio />} />
         <Route path="/paciente" element={<PacienteView />} />
+        <Route path="/pacienteLanding" element={<PacienteLanding />} />
+        <Route path="/pacienteBusqueda" element={<PacienteBusqueda />} />
+        <Route path="/pacienteAgendarHora/:id" element={<AgendarHora />} />
         <Route path="/" element={<h1>Bienvenido a Encuadrado</h1>} />
       </Routes>
     </Router>

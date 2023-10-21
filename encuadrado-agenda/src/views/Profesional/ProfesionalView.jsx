@@ -1,44 +1,45 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './ProfesionalView.css';
 
 const ProfesionalView = () => {
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');  
   const navigate = useNavigate();
+  
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (user === 'encuadrado' && pass === 'enc123**456&789') {
+    if (user === 'encuadrado' && pass === '123') {
       console.log('Login exitoso');
-      navigate('/profesional/home'); // Navega a la nueva vista
+      navigate('/profesional/home');
     } else {
       console.log('Credenciales incorrectas');
+      setErrorMsg('Credenciales incorrectas');  
     }
   };
 
   return (
-    <div>
-      <h1>Vista del Profesional</h1>
+    <div className="divLogin">  {/* Añade una clase para centrar el contenido */}
+      <h1>ADMINISTRADOR ENCUADRADO</h1>
 
       <form onSubmit={handleLogin}>
-        <div>
-          <label>Usuario:</label>
+          <label className='labelLogin'>Usuario:</label>
           <input
             type="text"
             value={user}
             onChange={(event) => setUser(event.target.value)}
           />
-        </div>
-        <div>
-          <label>Contraseña:</label>
+          <label className='labelLogin'>Contraseña:</label>
           <input
             type="password"
             value={pass}
             onChange={(event) => setPass(event.target.value)}
           />
-        </div>
-        <button type="submit">Iniciar sesión</button>
+        <button className='buttonLogin' type="submit">INICIAR SESIÓN COMO ADMIN</button>
       </form>
+      {errorMsg && <p className='pLogin'>{errorMsg}</p>}  
     </div>
   );
 };

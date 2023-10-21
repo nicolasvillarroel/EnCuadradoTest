@@ -1,0 +1,57 @@
+/* ProfesionalView.css */
+
+body {
+    font-family: Arial, sans-serif; /* Utiliza la fuente que mejor te parezca */
+    background-color: #FCE6E6; /* Color de fondo rosa claro */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #8C7171; /* Color de texto del encabezado */
+    font-weight: 500;
+}
+
+.divLogin {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.labelLogin {
+    display: block;
+    margin-bottom: 5px;
+    color: #8C7171; /* Color del texto del label */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E3CDCD; /* Borde de los inputs */
+    border-radius: 5px; /* Bordes redondeados en los inputs */
+    margin-bottom: 15px;
+}
+
+.buttonLogin {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #C0A3A3; /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados del botón */
+    color: white; /* Color de texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+}
+
+button:hover {
+    background-color: #A88B8B; /* Color de fondo del botón al pasar el cursor por encima */
+}
+
+.pLogin {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
