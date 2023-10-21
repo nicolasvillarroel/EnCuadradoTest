@@ -132,21 +132,21 @@ const AgregarServicio = () => {
       </label>
 
       <h3>Disponibilidad para trabajar:</h3>
-    <div className="disponibilidad-grid">
-        {servicio.disponibilidad.map((diaObj, diaIndex) => (
-          <React.Fragment key={diaIndex}>
-            <div>{diaObj.fecha}</div>
-            {diaObj.horarios.map((horaObj, horaIndex) => (
-              <div
-                key={horaIndex}
-                className={horaObj.disponible ? 'disponible' : 'no-disponible'}
-                onClick={() => handleDisponibilidadClick(diaIndex, horaIndex)}
-              ></div>
+      <div className="disponibilidad-container">
+        {servicio.disponibilidad.map((dia, diaIndex) => (
+          <div key={diaIndex} className="dia-disponibilidad">
+            <h4>{dia.fecha}</h4>
+            {dia.horarios.map((hora, horaIndex) => (
+              <span 
+                key={horaIndex} 
+                className={hora.disponible ? "hora-disponible" : "hora-no-disponible"}
+                onClick={() => handleDisponibilidadClick(diaIndex, horaIndex)}>
+                {hora.hora}
+              </span>
             ))}
-          </React.Fragment>
+          </div>
         ))}
-    </div>
-
+      </div>
       <button onClick={handleAddService}>AÑADIR SERVICIO</button>
     </div>
   );

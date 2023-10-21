@@ -6,6 +6,7 @@ import PacienteLanding from './views/Paciente/PacienteLanding';
 import PacienteBusqueda from './views/Paciente/PacienteBusqueda';
 import AgendarHora from './views/Paciente/AgendarHora';
 import ProfesionalView from './views/Profesional/ProfesionalView';
+import Disponibilidad from './views/Profesional/Disponibilidad';
 import ProfesionalHome from './views/Profesional/ProfesionalHome';
 import AgregarServicio from './views/Profesional/AgregarServicio';
 // import FormularioHorariosServicios from './views/Profesional/FormularioHorariosServicios';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/profesional" element={<ProfesionalView />} />
         <Route path="/profesional/home" element={<ProfesionalHome />} />
         <Route path="/profesional/agregarservicio" element={<AgregarServicio />} />
+        <Route path="/profesional/disponibilidad/:id" element={<Disponibilidad />} />
         <Route path="/paciente" element={<PacienteView />} />
         <Route path="/pacienteLanding" element={<PacienteLanding />} />
         <Route path="/pacienteBusqueda" element={<PacienteBusqueda />} />

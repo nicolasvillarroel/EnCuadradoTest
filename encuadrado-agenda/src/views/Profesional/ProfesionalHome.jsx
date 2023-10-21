@@ -40,8 +40,13 @@ const ProfesionalHome = ({ servicios = [], eliminarServicio }) => {
             <span>{servicio.tipo}</span>
             <span>{servicio.nombre}</span>
             <span>{servicio.edad} AÑOS</span>
-            <span>${servicio.precio}</span>
-            <button className="ver-btn">VER DISPONIBILIDAD</button>
+            <span>${servicio.precio} / hora</span>
+            <button 
+              className="ver-btn"
+              onClick={() => navigate(`/profesional/disponibilidad/${index}`)}  // Aquí pasamos el índice del profesional como parámetro
+            >
+              VER DISPONIBILIDAD
+            </button>
             <button className="eliminar-btn" onClick={() => eliminarServicioPorIndex(index)}>eliminar</button>
 
           </div>

@@ -16,9 +16,19 @@ const PacienteBusqueda = () => {
   }, [selectedService]);
 
   const handleAgendarHoraClick = (providerIndex) => {
+    // Obtener el proveedor seleccionado
+    const selectedProfessional = serviceProviders[providerIndex];
+
+    // Añadir el campo index a selectedProfessional
+    selectedProfessional.id = providerIndex; // Añade el índice al objeto
+
+    // Guardar el proveedor seleccionado en el localStorage con su id asignado
+    localStorage.setItem('selectedProfessional', JSON.stringify(selectedProfessional));
+
     // Navega a la vista AgendarHora con el índice del proveedor como parámetro
     navigate(`/pacienteAgendarHora/${providerIndex}`);
-  };
+};
+
 
   return (
     <div>
