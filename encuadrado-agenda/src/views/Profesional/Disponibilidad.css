@@ -1,0 +1,27 @@
+.disponibilidad-container {
+    width: 830px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.dia-disponibilidad {
+    margin-bottom: 20px;
+}
+
+.hora-disponible {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+.hora-no-disponible {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+}
