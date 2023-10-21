@@ -1,0 +1,56 @@
+/* AgregarServicio.css */
+
+.agregar-servicio-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    /* background-color: #F2E9E4; */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  select, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .disponibilidad-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .disponible, .no-disponible {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .disponible {
+    background-color: green;
+  }
+  
+  .no-disponible {
+    background-color: red;
+  }
+  
+  button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  

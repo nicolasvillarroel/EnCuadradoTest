@@ -1,0 +1,43 @@
+.paciente-landing {
+    background: #FFEEF0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #C3D1D9;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #AAB9C7;
+}
+
+.professional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.professional button {
+    background-color: #70E1A1;
+    color: white;
+}
