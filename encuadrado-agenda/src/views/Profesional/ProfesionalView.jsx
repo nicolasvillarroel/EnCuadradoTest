@@ -11,7 +11,7 @@ const ProfesionalView = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (user === 'encuadrado' && pass === '123') {
+    if (user === 'encuadrado' && pass === 'enc123**456&789') {
       console.log('Login exitoso');
       navigate('/profesional/home');
     } else {
