@@ -1,7 +1,6 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import PacienteView from './views/PacienteView';
 import PacienteLanding from './views/Paciente/PacienteLanding';
 import PacienteBusqueda from './views/Paciente/PacienteBusqueda';
 import AgendarHora from './views/Paciente/AgendarHora';
@@ -24,7 +23,6 @@ function App() {
         <Route path="/profesional/home" element={<ProfesionalHome />} />
         <Route path="/profesional/agregarservicio" element={<AgregarServicio />} />
         <Route path="/profesional/disponibilidad/:id" element={<Disponibilidad />} />
-        <Route path="/paciente" element={<PacienteView />} />
         <Route path="/pacienteLanding" element={<PacienteLanding />} />
         <Route path="/pacienteBusqueda" element={<PacienteBusqueda />} />
         <Route path="/pacienteAgendarHora/:id" element={<AgendarHora />} />
